@@ -42,7 +42,7 @@ public class ResultParser {
             return false;
         }
 
-        String patternStr = "([a-zA-Z]+)-v([0-9.]+).xml";
+        String patternStr = "([a-zA-Z0-9]+)-v([0-9.]+).xml";
         Pattern pattern = Pattern.compile(patternStr);
         Matcher m = pattern.matcher(resultFile.getName());
         if (m.find()) {
