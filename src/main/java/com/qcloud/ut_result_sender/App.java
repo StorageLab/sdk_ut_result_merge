@@ -9,14 +9,21 @@ import com.qcloud.ut_result_sender.ut_result_parse.TaskExecutor;
  */
 public class App {
     public static void main(String[] args) {
-        if (args.length != 3) {
+        if (args.length != 4) {
             System.err.println("args num wrong");
             return;
         }
-        BackUpInstance.INSTANCE.init();
-        TaskExecutor taskExecutor = new TaskExecutor(args[0], args[1], args[2]);
+
+        String inputFolder = args[0];
+        String buildUrl = args[1];
+        String buildConsoleUrl = args[2];
+        String buildNumber = args[3];
+
+        BackUpInstance.INSTANCE.init(buildNumber);
+        TaskExecutor taskExecutor =
+                new TaskExecutor(inputFolder, buildUrl, buildConsoleUrl, buildNumber);
         taskExecutor.run();
         BackUpInstance.INSTANCE.shutdown();
-        
+
     }
 }

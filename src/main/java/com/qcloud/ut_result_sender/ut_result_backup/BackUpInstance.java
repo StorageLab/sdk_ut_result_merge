@@ -24,7 +24,7 @@ public class BackUpInstance {
 
     private BackUpInstance() {}
 
-    public void init() {
+    public void init(String buildNumber) {
         String ak = System.getenv("backupxml_secretId");
         String sk = System.getenv("backupxml_secretKey");
         region = System.getenv("backupxml_region");
@@ -36,8 +36,8 @@ public class BackUpInstance {
         ClientConfig clientConfig = new ClientConfig(new Region(region));
         cosclient = new COSClient(cred, clientConfig);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd/HHmmss/");
-        backupFolder = sdf.format(new Date());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        backupFolder = String.format("%s/%s/", sdf.format(new Date()), buildNumber); 
     }
 
     public void shutdown() {

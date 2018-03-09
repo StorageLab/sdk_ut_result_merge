@@ -49,15 +49,17 @@ public class TaskExecutor {
     private String localFolderPath;
     private String buildUrl;
     private String buildConsoleOutputUrl;
+    private String buildNumber;
 
     private LanguageStaticsInfo totalInfo = new LanguageStaticsInfo();
     private Map<String, List<LanguageStaticsInfo>> detailInfo = new TreeMap<>();
 
-    public TaskExecutor(String localFolderPath, String buildUrl, String buildConsoleUrl) {
+    public TaskExecutor(String localFolderPath, String buildUrl, String buildConsoleUrl, String buildNumber) {
         super();
         this.localFolderPath = localFolderPath;
         this.buildUrl = buildUrl;
         this.buildConsoleOutputUrl = buildConsoleUrl;
+        this.buildNumber = buildNumber;
     }
 
     public void scanLocalFolder() {
@@ -131,6 +133,7 @@ public class TaskExecutor {
 
             String currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
             Map<String, Object> paramMap = new HashMap<>();
+            paramMap.put("buildNumber", buildNumber);
             paramMap.put("buildUrl", buildUrl);
             paramMap.put("buildConsoleUrl", buildConsoleOutputUrl);
             paramMap.put("testTime", currentTime);
