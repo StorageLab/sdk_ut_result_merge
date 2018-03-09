@@ -1,0 +1,49 @@
+<testsuite name="Mocha Tests" tests="47" failures="0" errors="0" skipped="0" timestamp="Thu, 25 Jan 2018 09:31:26 GMT" time="41.571">
+<testcase classname="getService()" name="&#x80FD;&#x6B63;&#x5E38;&#x5217;&#x51FA; Bucket" time="0.48"/>
+<testcase classname="getAuth()" name="&#x901A;&#x8FC7;&#x83B7;&#x53D6;&#x7B7E;&#x540D;&#x80FD;&#x6B63;&#x5E38;&#x83B7;&#x53D6;&#x6587;&#x4EF6;" time="0.406"/>
+<testcase classname="putBucket()" name="&#x6B63;&#x5E38;&#x521B;&#x5EFA; bucket" time="0.842"/>
+<testcase classname="getBucket()" name="&#x6B63;&#x5E38;&#x83B7;&#x53D6; bucket &#x91CC;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;" time="0.127"/>
+<testcase classname="putObject()" name="fs.createReadStream &#x521B;&#x5EFA; object" time="2.111"/>
+<testcase classname="putObject()" name="fs.readFileSync &#x521B;&#x5EFA; object" time="2.104"/>
+<testcase classname="putObject()" name="&#x6355;&#x83B7;&#x8F93;&#x5165;&#x6D41;&#x5F02;&#x5E38;" time="1.063"/>
+<testcase classname="getObject()" name="stream" time="2.101"/>
+<testcase classname="getObject()" name="body" time="2.112"/>
+<testcase classname="sliceUploadFile()" name="&#x6B63;&#x5E38;&#x5206;&#x7247;&#x4E0A;&#x4F20; object" time="0.749"/>
+<testcase classname="BucketAcl" name="putBucketAcl() header ACL:private" time="0.205"/>
+<testcase classname="BucketAcl" name="putBucketAcl() header ACL:public-read" time="0.259"/>
+<testcase classname="BucketAcl" name="putBucketAcl() header ACL:public-read-write" time="0.258"/>
+<testcase classname="BucketAcl" name="putBucketAcl() header GrantRead:1001,1002" time="0.264"/>
+<testcase classname="BucketAcl" name="putBucketAcl() header GrantWrite:1001,1002" time="0.277"/>
+<testcase classname="BucketAcl" name="putBucketAcl() header GrantFullControl:1001,1002" time="0.261"/>
+<testcase classname="BucketAcl" name="putBucketAcl() header ACL:public-read, GrantFullControl:1001,1002" time="0.29"/>
+<testcase classname="BucketAcl" name="putBucketAcl() xml" time="0.286"/>
+<testcase classname="BucketAcl" name="putBucketAcl() xml2" time="0.285"/>
+<testcase classname="BucketAcl" name="putBucketAcl() decodeAcl" time="0.279"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header ACL:private" time="0.313"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header ACL:default" time="0.169"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header ACL:public-read" time="0.23"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header ACL:public-read-write" time="0.252"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header GrantRead:1001,1002" time="0.233"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header GrantWrite:1001,1002" time="0.236"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header GrantFullControl:1001,1002" time="0.236"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() header ACL:public-read, GrantRead:1001,1002" time="0.295"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() xml" time="0.269"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() xml2" time="0.247"/>
+<testcase classname="ObjectAcl" name="putObjectAcl() decodeAcl" time="0.272"/>
+<testcase classname="BucketCors" name="deleteBucketCors()" time="2.056"/>
+<testcase classname="BucketCors" name="putBucketCors(),getBucketCors()" time="2.061"/>
+<testcase classname="BucketCors" name="putBucketCors() old" time="2.061"/>
+<testcase classname="BucketCors" name="putBucketCors() old" time="2.047"/>
+<testcase classname="BucketCors" name="putBucketCors() multi" time="2.048"/>
+<testcase classname="BucketTagging" name="putBucketTagging(),getBucketTagging()" time="2.256"/>
+<testcase classname="BucketTagging" name="deleteBucketTagging()" time="2.152"/>
+<testcase classname="BucketTagging" name="putBucketTagging() multi" time="2.219"/>
+<testcase classname="BucketPolicy" name="putBucketPolicy(),getBucketPolicy()" time="0.269"/>
+<testcase classname="BucketPolicy" name="putBucketPolicy() s3" time="0.27"/>
+<testcase classname="BucketLocation" name="getBucketLocation()" time="0.021"/>
+<testcase classname="BucketLifecycle" name="deleteBucketLifecycle()" time="2.337"/>
+<testcase classname="BucketLifecycle" name="putBucketLifecycle(),getBucketLifecycle()" time="2.115"/>
+<testcase classname="BucketLifecycle" name="putBucketLifecycle() multi" time="2.12"/>
+<testcase classname="params check" name="Region" time="0"/>
+<testcase classname="params check" name="Region" time="0"/>
+</testsuite>

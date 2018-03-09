@@ -1,0 +1,481 @@
+<testsuite name="Mocha Tests" tests="43" failures="40" errors="40" skipped="0" timestamp="Thu, 25 Jan 2018 09:30:36 GMT" time="4.897">
+<testcase classname="getService()" name="&#x80FD;&#x6B63;&#x5E38;&#x5217;&#x51FA; Bucket" time="0.502"/>
+<testcase classname="getAuth()" name="&#x901A;&#x8FC7;&#x83B7;&#x53D6;&#x7B7E;&#x540D;&#x80FD;&#x6B63;&#x5E38;&#x83B7;&#x53D6;&#x6587;&#x4EF6;" time="0"><failure>Cannot read property &#x27;statusCode&#x27; of undefined
+TypeError: Cannot read property &#x27;statusCode&#x27; of undefined
+    at Request._callback (test.js:114:36)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="putBucket()" name="&#x6B63;&#x5E38;&#x521B;&#x5EFA; bucket" time="0"><failure>Cannot read property &#x27;Location&#x27; of undefined
+TypeError: Cannot read property &#x27;Location&#x27; of undefined
+    at test.js:132:104
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:178:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="getBucket()" name="&#x6B63;&#x5E38;&#x83B7;&#x53D6; bucket &#x91CC;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;" time="0"><failure>Cannot read property &#x27;Name&#x27; of undefined
+TypeError: Cannot read property &#x27;Name&#x27; of undefined
+    at test.js:158:40
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:128:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="putObject()" name="fs.createReadStream &#x521B;&#x5EFA; object" time="0"><failure>the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+Error: the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+    at process._fatalException (bootstrap_node.js:329:26)</failure></testcase>
+<testcase classname="putObject()" name="fs.readFileSync &#x521B;&#x5EFA; object" time="0"><failure>the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+Error: the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+    at process._fatalException (bootstrap_node.js:329:26)</failure></testcase>
+<testcase classname="putObject()" name="&#x6355;&#x83B7;&#x8F93;&#x5165;&#x6D41;&#x5F02;&#x5E38;" time="0.033"/>
+<testcase classname="getObject()" name="stream" time="0"><failure>the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+Error: the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+    at process._fatalException (bootstrap_node.js:329:26)</failure></testcase>
+<testcase classname="getObject()" name="body" time="0"><failure>the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+Error: the object {
+  &#x22;error&#x22;: &#x22;Error: getaddrinfo ENOTFOUND test-1253960454.ap-guangzhou.myqcloud.com test-1253960454.ap-guangzhou.myqcloud.com:80&#x22;
+  &#x22;uncaught&#x22;: true
+} was thrown, throw an Error :)
+    at process._fatalException (bootstrap_node.js:329:26)</failure></testcase>
+<testcase classname="sliceUploadFile()" name="&#x6B63;&#x5E38;&#x5206;&#x7247;&#x4E0A;&#x4F20; object" time="0"><failure>Cannot read property &#x27;ETag&#x27; of undefined
+TypeError: Cannot read property &#x27;ETag&#x27; of undefined
+    at Object.callback (test.js:363:40)
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\task.js:43:47
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\advance.js:34:16
+    at EventProxy._all (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\eventproxy\lib\eventproxy.js:299:16)
+    at EventProxy.trigger (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\eventproxy\lib\eventproxy.js:182:22)
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\advance.js:105:39
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\advance.js:233:16
+    at EventProxy._all (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\eventproxy\lib\eventproxy.js:299:16)
+    at EventProxy.trigger (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\eventproxy\lib\eventproxy.js:182:22)
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\advance.js:341:26
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\advance.js:367:29
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1538:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() header ACL:private" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:405:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() header ACL:public-read" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:418:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() header ACL:public-read-write" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:433:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() header GrantRead:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:448:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() header GrantWrite:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:465:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() header GrantFullControl:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:482:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() header ACL:public-read, GrantFullControl:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:500:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() xml" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:519:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketACL" name="putBucketAcl() xml2" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:534:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() header ACL:private" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at Object.callback (test.js:575:13)
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\task.js:43:47
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:979:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() header ACL:public-read" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:597:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1123:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() header ACL:public-read-write" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:613:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1123:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() header GrantRead:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:629:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1123:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() header GrantWrite:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:647:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1123:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() header GrantFullControl:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:665:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1123:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() header ACL:public-read, GrantRead:uin=&#x22;1001&#x22;, uin=&#x22;1002&#x22;" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:684:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1123:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putObjectAcl() xml" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:704:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1123:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="ObjectACL" name="putBucketAcl() xml2" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:720:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:301:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketCORS" name="deleteBucketCors()" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:764:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:422:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketCORS" name="putBucketCors(),getBucketCors()" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:784:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:393:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketCORS" name="putBucketCors() old" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:805:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:393:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketCORS" name="putBucketCors() old" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:823:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:393:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketCORS" name="putBucketCors() multi" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:841:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:393:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketTagging" name="putBucketTagging(),getBucketTagging()" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:870:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:604:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketTagging" name="deleteBucketTagging()" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:885:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:634:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketTagging" name="putBucketTagging() multi" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:904:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:604:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketPolicy" name="putBucketPolicy(),getBucketPolicy()" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:944:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:461:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketPolicy" name="putBucketPolicy() s3" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:960:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:461:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketLocation" name="getBucketLocation()" time="0"><failure>Cannot read property &#x27;LocationConstraint&#x27; of undefined
+TypeError: Cannot read property &#x27;LocationConstraint&#x27; of undefined
+    at test.js:978:24
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:488:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketLifecycle" name="deleteBucketLifecycle()" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:1020:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:711:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketLifecycle" name="putBucketLifecycle(),getBucketLifecycle()" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:1042:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:666:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="BucketLifecycle" name="putBucketLifecycle() multi" time="0"><failure>false == true
+AssertionError [ERR_ASSERTION]: false == true
+    at test.js:1061:13
+    at E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:666:20
+    at cb (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1757:17)
+    at Request._callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\cos-nodejs-sdk-v5\sdk\base.js:1768:13)
+    at self.callback (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:186:22)
+    at Request.onRequestError (E:\gitcode\cos-sdk-test\nodejs\2.0.6\node_modules\request\request.js:878:8)
+    at Socket.socketErrorListener (_http_client.js:400:9)
+    at emitErrorNT (internal/streams/destroy.js:62:8)
+    at _combinedTickCallback (internal/process/next_tick.js:102:11)
+    at process._tickCallback (internal/process/next_tick.js:161:9)</failure></testcase>
+<testcase classname="params check" name="Region" time="0"/>
+</testsuite>

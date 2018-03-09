@@ -13,9 +13,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.qcloud.ut_result_sender.meta.ErrorFailureCase;
 import com.qcloud.ut_result_sender.meta.LanguageStaticsInfo;
+import com.qcloud.ut_result_sender.ut_result_backup.BackUpInstance;
 
 public class ResultParser {
 
@@ -35,6 +39,41 @@ public class ResultParser {
         this.resultFile = resultFile;
     }
 
+    private void parseTestSuite(Element testSuiteElement) {
+        NodeList testCaseList = testSuiteElement.getElementsByTagName("testcase");
+        for (int testCaseIndex = 0; testCaseIndex < testCaseList.getLength(); ++testCaseIndex) {
+            Element testCaseElement = (Element) testCaseList.item(testCaseIndex);
+            String className = testCaseElement.getAttribute("classname");
+            String testCaseName = testCaseElement.getAttribute("name");
+            NodeList failureList = testCaseElement.getElementsByTagName("failure");
+            NodeList errorList = testCaseElement.getElementsByTagName("error");
+            if (failureList != null && failureList.getLength() != 0) {
+                staticsInfo.addErrorFailureCase(
+                        new ErrorFailureCase("failure", className + " / " + testCaseName));
+            }
+            if (errorList != null && errorList.getLength() != 0) {
+                staticsInfo.addErrorFailureCase(
+                        new ErrorFailureCase("error", className + " / " + testCaseName));
+            }
+        }
+    }
+
+    private boolean parseErrorAndFailure(Element rootElement) {
+        if (rootElement.getTagName().equals("testsuites")) {
+            NodeList testsuiteList = rootElement.getElementsByTagName("testsuite");
+            for (int testSuiteIndex = 0; testSuiteIndex < testsuiteList
+                    .getLength(); ++testSuiteIndex) {
+                if (testsuiteList.item(testSuiteIndex).getNodeType() == Node.ELEMENT_NODE) {
+                    Element testSuiteElement = (Element) testsuiteList.item(testSuiteIndex);
+                    parseTestSuite(testSuiteElement);
+                }
+            }
+        } else if (rootElement.getTagName().equals("testsuite")) {
+            parseTestSuite(rootElement);
+        }
+        return true;
+    }
+
     public boolean parse() {
         if (!resultFile.exists()) {
             log.error("ut result file not exist. path: {}", resultFile.getAbsolutePath());
@@ -42,7 +81,7 @@ public class ResultParser {
             return false;
         }
 
-        String patternStr = "([a-zA-Z]+)-v([0-9.]+).xml";
+        String patternStr = "([a-zA-Z0-9]+)-v([0-9.]+).xml";
         Pattern pattern = Pattern.compile(patternStr);
         Matcher m = pattern.matcher(resultFile.getName());
         if (m.find()) {
@@ -82,12 +121,17 @@ public class ResultParser {
                 String timeAttrStr = rootElement.getAttribute(time_attr);
                 staticsInfo.setTime(Double.valueOf(timeAttrStr));
             }
+            parseErrorAndFailure(rootElement);
         } catch (SAXException | IOException | ParserConfigurationException
                 | NumberFormatException e) {
             log.error("xml parse result file failed! file_path: {}, exception: {}",
                     resultFile.getAbsolutePath(), e.toString());
             staticsInfo.increaseParseFailed();
             return false;
+        }
+        String xmlLink = BackUpInstance.INSTANCE.backUpXml(resultFile);
+        if (xmlLink != null) {
+            staticsInfo.setXmlLink(xmlLink);
         }
         return true;
     }

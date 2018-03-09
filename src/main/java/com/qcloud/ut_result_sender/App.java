@@ -1,5 +1,6 @@
 package com.qcloud.ut_result_sender;
 
+import com.qcloud.ut_result_sender.ut_result_backup.BackUpInstance;
 import com.qcloud.ut_result_sender.ut_result_parse.TaskExecutor;
 
 /**
@@ -8,11 +9,14 @@ import com.qcloud.ut_result_sender.ut_result_parse.TaskExecutor;
  */
 public class App {
     public static void main(String[] args) {
-        if (args.length != 1) {
+        if (args.length != 3) {
             System.err.println("args num wrong");
             return;
         }
-        TaskExecutor taskExecutor = new TaskExecutor(args[0]);
+        BackUpInstance.INSTANCE.init();
+        TaskExecutor taskExecutor = new TaskExecutor(args[0], args[1], args[2]);
         taskExecutor.run();
+        BackUpInstance.INSTANCE.shutdown();
+        
     }
 }

@@ -1,0 +1,296 @@
+<meta charset="UTF-8">
+<title>COS SDK 统一自动测试</title>
+
+<style>
+	.bg_success {
+		background: #b4fdd4;
+	}
+
+	.bg_error {
+		background: #ffb6b6;
+	}
+
+	.success {
+		color: #01c76c !important;
+	}
+
+	.error {
+		color: #e1504a !important;
+	}
+
+	.onebox {
+		font: 14px/18px "Microsoft Yahei";
+	}
+
+	.top {
+		margin-top: 20px;
+	}
+
+	.top h1 {
+		float: left;
+		margin: 0 20px 0 0;
+		font: bold 18px/20px "Microsoft Yahei";
+		color: #383d49;
+	}
+
+	.top .build_url_info {
+		float: right;
+		margin-left: 15px;
+		font: 14px/20px "Microsoft Yahei";
+	}
+
+	.total {
+		border-collapse: collapse;
+		width: 100%;
+		border: 1px solid #bdc4ca;
+		background: #fff;
+		margin-top: 20px;
+	}
+
+	.total td {
+		text-align: center;
+		border: 1px solid #bdc4ca;
+		padding: 24px 0;
+		font-size: 24px;
+		background: #f5f6f8;
+		color: #333
+	}
+
+	.total_name {
+		font-size: 20px;
+		line-height: 16px;
+	}
+
+	.total_number {
+		font-size: 32px;
+		line-height: 20px;
+		padding-bottom: 10px;
+	}
+
+	.box {
+		border-collapse: collapse;
+		width: 100%;
+		border: 1px solid #bdc4ca;
+		background: #fff;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.box caption {
+		margin: 0;
+		padding: 6px;
+		border: 1px solid #bdc4ca;
+		border-bottom: 0;
+	}
+
+	.box caption p {
+		margin: 0;
+		color: #383d49;
+		font: 15px/18px "Microsoft Yahei";
+		font-weight: bold;
+		padding-left: 20px;
+	}
+
+	.box td {
+		padding: 8px;
+		border: 0;
+		border-bottom: 1px solid #bdc4ca;
+		word-break: break-all;
+		word-wrap: break-word;
+	}
+
+	.box th p,
+	.box td p {
+		margin: 0;
+		color: #383d49;
+		font: 12px/18px "Microsoft Yahei";
+	}
+
+	.box th p {
+		color: #333;
+		font-weight: bold;
+	}
+
+	.box th {
+		padding: 6px 8px;
+		border: 1px solid #bdc4ca;
+		background: #f5f6f8;
+		white-space: nowrap;
+		text-align: center;
+	}
+
+	.box td.sdk_name {
+		background: #fff;
+		border-right: 1px solid #bdc4ca;
+	}
+
+	.box td.sdk_name p {
+		font-weight: bold;
+		background: #fff;
+		font: bold 16px/18px "Microsoft Yahei";
+	}
+
+	.detail td {
+		border: 1px solid #bdc4ca;
+	}
+</style>
+
+<div class="onebox" style="width: 960px; margin: auto;">
+	<div class="top">
+		<h1>COS SDK 统一自动测试</h1>
+		<a class="build_url_info" href="${buildUrl}">pipeline blue地址</a>
+		<a class="build_url_info" href="${buildConsoleUrl}">pipeline console地址</a>
+		<p style="margin: 0 0 0 20px; color: #8b8b8b; font: 12px/18px \5b8b\4f53;">自动测试完成时间：${testTime}</p>
+	</div>
+
+	<table class="total" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<p class="total_name">总测试用例数</p>
+				<p class="total_number">${totalInfo.tests}</p>
+			</td>
+			<td>
+				<p class="total_name">failure的用例数</p>
+				<p class="total_number error">${totalInfo.failures}</p>
+			</td>
+			<td>
+				<p class="total_name">error的用例数</p>
+				<p class="total_number error">${totalInfo.errors}</p>
+			</td>
+
+		</tr>
+	</table>
+
+	<table class="box" cellpadding="0" cellspacing="0">
+		<caption>
+			<p>用例统计明细</p>
+		</caption>
+		<thead>
+			<tr>
+				<th>
+					<p>SDK名称</p>
+				</th>
+				<th>
+					<p>SDK版本号</p>
+				</th>
+				<th>
+					<p>用例数</p>
+				</th>
+				<th>
+					<p class="failure">failure数</p>
+				</th>
+				<th>
+					<p class="error">error数</p>
+				</th>
+				<th>
+					<p>跳过数</p>
+				</th>
+				<th>
+					<p>耗时</p>
+				</th>
+				<th>
+					<p>下载 XML</p>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<#list detailInfo?keys as key>
+				<#list detailInfo[key] as versionItem>
+					<!--<tr class="bg_success">-->
+					<!--<tr class="bg_error">-->
+					<tr class="bg_${versionItem.state}">
+						<#if (versionItem_index==0)>
+							<td class="sdk_name" rowspan="${detailInfo[key]?size}">
+								<p>${key}</p>
+							</td>
+						</#if>
+						<td>
+							<p>${versionItem.version}</p>
+						</td>
+						<td>
+							<p>${versionItem.tests}</p>
+						</td>
+						<td>
+							<p class="failure">${versionItem.failures}</p>
+						</td>
+						<td>
+							<p class="error">${versionItem.errors}</p>
+						</td>
+						<td>
+							<p>${versionItem.skipped}</p>
+						</td>
+						<td>
+							<p>${versionItem.time}</p>
+						</td>
+						<td>
+							<p>
+								<a href="${versionItem.xmlLink}">下载 XML</a>
+							</p>
+						</td>
+					</tr>
+				</#list>
+			</#list>
+		</tbody>
+	</table>
+
+	<table class="box detail" cellpadding="0" cellspacing="0">
+		<caption>
+			<p>失败用例明细</p>
+		</caption>
+		<thead>
+			<tr>
+				<th>
+					<p>SDK名称</p>
+				</th>
+				<th>
+					<p>SDK版本号</p>
+				</th>
+				<th>
+					<p>用例名称</p>
+				</th>
+				<th>
+					<p>失败类型</p>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<#list detailInfo?keys as key>
+				<#list detailInfo[key] as versionItem>
+					<#list versionItem.errorFailureCaseList as failureErrorItem>
+						<#if (versionItem_index == 0 && failureErrorItem_index == 0 && key_index > 0)>
+							<tr>
+								<td>
+									<p></p>
+								</td>
+								<td>
+									<p></p>
+								</td>
+								<td>
+									<p></p>
+								</td>
+								<td>
+									<p></p>
+								</td>
+							</tr>
+						</#if>
+						<tr>
+							<td>
+								<p>${key}</p>
+							</td>
+							<td>
+								<p>${versionItem.version}</p>
+							</td>
+							<td>
+								<p>${failureErrorItem.caseName}</p>
+							</td>
+							<td>
+								<p>${failureErrorItem.type}</p>
+							</td>
+						</tr>
+					</#list>
+				</#list>
+			</#list>
+		</tbody>
+	</table>
+</div>
