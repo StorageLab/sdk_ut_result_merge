@@ -54,7 +54,8 @@ public class TaskExecutor {
     private LanguageStaticsInfo totalInfo = new LanguageStaticsInfo();
     private Map<String, List<LanguageStaticsInfo>> detailInfo = new TreeMap<>();
 
-    public TaskExecutor(String localFolderPath, String buildUrl, String buildConsoleUrl, String buildNumber) {
+    public TaskExecutor(String localFolderPath, String buildUrl, String buildConsoleUrl,
+            String buildNumber) {
         super();
         this.localFolderPath = localFolderPath;
         this.buildUrl = buildUrl;
@@ -140,8 +141,8 @@ public class TaskExecutor {
             paramMap.put("totalInfo", totalInfo);
             paramMap.put("detailInfo", detailInfo);
 
-            Writer writer =
-                    new OutputStreamWriter(new FileOutputStream("output/email_content.html"), "UTF-8");
+            Writer writer = new OutputStreamWriter(
+                    new FileOutputStream("output/email_content.html"), "UTF-8");
             template.process(paramMap, writer);
             writer.close();
         } catch (IOException | TemplateException e) {
@@ -179,24 +180,26 @@ public class TaskExecutor {
         String emailFrom = System.getenv("email_from");
         String emailFromName = System.getenv("email_from_name");
         String emailFromPasswd = System.getenv("email_from_passwd");
-        String emailSendTo = System.getenv("email_sendto");
+        String emailSendToArrStr = System.getenv("email_sendto");
+        String[] emailSendToArray = emailSendToArrStr.split(",");
 
         // 不要使用SimpleEmail,会出现乱码问题
         HtmlEmail email = new HtmlEmail();
         email.setSSLOnConnect(true);
-        // SimpleEmail email = new SimpleEmail();
         try {
-            // 这里是SMTP发送服务器的名字：qq的如下：
+            // 这里是SMTP发送服务器的名字：
             email.setHostName(emailHost);
             // 字符编码集的设置
             email.setCharset("UTF-8");
             // 收件人的邮箱
-            email.addTo(emailSendTo);
+            for (String emailSendTo : emailSendToArray) {
+                email.addTo(emailSendTo);
+            }
             // 发送人的邮箱
             email.setFrom(emailFrom, emailFromName);
             // 如果需要认证信息的话，设置认证：用户名-密码。分别为发件人在邮件服务器上的注册名称和密码
             email.setAuthentication(emailFrom, emailFromPasswd);
-            email.setSubject("[OneBox] SDK UT Report");
+            email.setSubject("[OneBox] SDK UT REPORT");
             // 要发送的信息，由于使用了HtmlEmail，可以在邮件内容中使用HTML标签
             email.setHtmlMsg(getEmailContent());
             // 发送
