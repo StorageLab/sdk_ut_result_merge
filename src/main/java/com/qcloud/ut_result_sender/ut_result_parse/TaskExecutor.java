@@ -50,17 +50,19 @@ public class TaskExecutor {
     private String buildUrl;
     private String buildConsoleOutputUrl;
     private String buildNumber;
+    private String buildRegion;
 
     private LanguageStaticsInfo totalInfo = new LanguageStaticsInfo();
     private Map<String, List<LanguageStaticsInfo>> detailInfo = new TreeMap<>();
 
     public TaskExecutor(String localFolderPath, String buildUrl, String buildConsoleUrl,
-            String buildNumber) {
+            String buildNumber, String buildRegion) {
         super();
         this.localFolderPath = localFolderPath;
         this.buildUrl = buildUrl;
         this.buildConsoleOutputUrl = buildConsoleUrl;
         this.buildNumber = buildNumber;
+        this.buildRegion = buildRegion;
     }
 
     public void scanLocalFolder() {
@@ -135,6 +137,7 @@ public class TaskExecutor {
             String currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
             Map<String, Object> paramMap = new HashMap<>();
             paramMap.put("buildNumber", buildNumber);
+            paramMap.put("buildRegion", buildRegion);
             paramMap.put("buildUrl", buildUrl);
             paramMap.put("buildConsoleUrl", buildConsoleOutputUrl);
             paramMap.put("testTime", currentTime);
@@ -183,6 +186,7 @@ public class TaskExecutor {
         String emailSendToArrStr = System.getenv("email_sendto");
         String[] emailSendToArray = emailSendToArrStr.split(",");
 
+        
         // 不要使用SimpleEmail,会出现乱码问题
         HtmlEmail email = new HtmlEmail();
         email.setSSLOnConnect(true);
@@ -193,6 +197,7 @@ public class TaskExecutor {
             email.setCharset("UTF-8");
             // 收件人的邮箱
             for (String emailSendTo : emailSendToArray) {
+                log.info("add email recever {}", emailSendTo);
                 email.addTo(emailSendTo);
             }
             // 发送人的邮箱
@@ -203,8 +208,10 @@ public class TaskExecutor {
             // 要发送的信息，由于使用了HtmlEmail，可以在邮件内容中使用HTML标签
             email.setHtmlMsg(getEmailContent());
             // 发送
+            log.info("ready to send email");
             email.send();
-        } catch (EmailException e) {
+            log.info("send success");
+        } catch (Exception e) {
             log.error("send email failed", e);
         }
     }
