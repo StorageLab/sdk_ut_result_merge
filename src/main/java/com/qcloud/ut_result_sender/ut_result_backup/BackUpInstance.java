@@ -34,6 +34,12 @@ public class BackUpInstance {
         }
         COSCredentials cred = new BasicCOSCredentials(ak, sk);
         ClientConfig clientConfig = new ClientConfig(new Region(region));
+        
+        String proxyHost = System.getenv("HTTP_PROXY_HOST");
+        if (proxyHost != null && proxyHost.length > 0) {
+            clientConfig.setHttpProxyIp(System.getenv("HTTP_PROXY_HOST"));
+            clientConfig.setHttpProxyIp(System.getenv("HTTP_PROXY_PORT"));
+        }
         cosclient = new COSClient(cred, clientConfig);
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");

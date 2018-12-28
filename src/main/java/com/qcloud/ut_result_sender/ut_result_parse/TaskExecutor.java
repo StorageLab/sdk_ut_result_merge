@@ -206,7 +206,9 @@ public class TaskExecutor {
             email.setAuthentication(emailFrom, emailFromPasswd);
             email.setSubject("[OneBox] SDK UT REPORT");
             // 要发送的信息，由于使用了HtmlEmail，可以在邮件内容中使用HTML标签
-            email.setHtmlMsg(getEmailContent());
+            String content = getEmailContent();
+            email.setHtmlMsg(content);
+            log.info(content);
             // 发送
             log.info("ready to send email");
             email.send();
